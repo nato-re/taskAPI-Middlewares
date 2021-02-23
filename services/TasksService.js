@@ -9,8 +9,8 @@ const findById = async (id) => {
   return await Task.findById(id);
 };
 
-const create = async (name) => {
-  const task = await Task.create(name);
+const create = async (name, status) => {
+  const task = await Task.create(name, status);
 
   await TelegramClient.sendMessage(name);
 
